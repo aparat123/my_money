@@ -124,7 +124,7 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:gravity="right|end"
-            android:text="Don't have account?"
+            android:text="Don't have account? "
             android:textColor="#FFFFFF" />
 
         <TextView
