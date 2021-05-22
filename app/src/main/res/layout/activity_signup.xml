@@ -63,7 +63,8 @@
             android:id="@+id/nameET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background" />
+            android:background="@drawable/edit_text_background"
+            android:textColor="#FFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +97,8 @@
             android:id="@+id/emailET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background" />
+            android:background="@drawable/edit_text_background"
+            android:textColor="#FFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +131,10 @@
             android:id="@+id/passwordET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background" />
+            android:background="@drawable/edit_text_background"
+            android:inputType="textPassword"
+            android:password="false"
+            android:textColor="#FFFFFF" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
