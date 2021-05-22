@@ -59,9 +59,11 @@
         android:textColorHint="#666666">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@id/textEditEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background" />
+            android:background="@drawable/edit_text_background"
+            android:textColor="#ffffff" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +85,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/createBtn"
+        android:layout_above="@id/loginBtn"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -91,14 +93,17 @@
         android:textColorHint="#666666">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditPwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background" />
+            android:background="@drawable/edit_text_background"
+            android:inputType="textPassword"
+            android:textColor="#ffffff" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/createBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_above="@id/linear"
@@ -127,13 +132,15 @@
             android:text="Don't have account? "
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/loginBtn"
+        <Button
+            android:id="@+id/signBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="start"
             android:text="Sing up"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />

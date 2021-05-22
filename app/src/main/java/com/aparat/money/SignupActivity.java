@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity{
@@ -33,7 +32,7 @@ public class SignupActivity extends AppCompatActivity{
         emailEditText = (TextInputEditText) findViewById(R.id.emailET);
         passwordEditText = (TextInputEditText) findViewById(R.id.passwordET);
         backBtn = (ImageButton) findViewById(R.id.backBtn);
-        createAccBtn = (Button) findViewById(R.id.createBtn);
+        createAccBtn = (Button) findViewById(R.id.loginBtn);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override

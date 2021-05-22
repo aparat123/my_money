@@ -72,7 +72,7 @@
         android:id="@+id/emailTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/textFieldEmail"
+        android:layout_above="@id/textEditEmail"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:text="Email"
@@ -81,7 +81,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/textFieldEmail"
+        android:id="@+id/textEditEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/createBtn"
+        android:layout_above="@id/loginBtn"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
@@ -139,7 +139,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/createBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_above="@id/linear"
@@ -169,7 +169,7 @@
             android:textColor="#FFFFFF" />
 
         <TextView
-            android:id="@+id/loginBtn"
+            android:id="@+id/signBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
