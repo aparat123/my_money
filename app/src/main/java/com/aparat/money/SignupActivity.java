@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity{
@@ -28,11 +29,13 @@ public class SignupActivity extends AppCompatActivity{
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
+
         nameEditText = (TextInputEditText) findViewById(R.id.nameET);
         emailEditText = (TextInputEditText) findViewById(R.id.emailET);
         passwordEditText = (TextInputEditText) findViewById(R.id.passwordET);
         backBtn = (ImageButton) findViewById(R.id.backBtn);
         createAccBtn = (Button) findViewById(R.id.loginBtn);
+
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,13 +77,16 @@ public class SignupActivity extends AppCompatActivity{
                             if(task.isSuccessful()){
                                 User user = new User(name, email, password);
 
+
                                 FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<Void> task) {
                                         if(task.isSuccessful()) {
-                                            Toast.makeText(getApplicationContext(), "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                            FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+                                            user1.sendEmailVerification();
+                                            Toast.makeText(getApplicationContext(), "User has been registered successfully! Check your email!", Toast.LENGTH_LONG).show();
                                         }
                                         else {
                                             Toast.makeText(getApplicationContext(), "Failed to register! Try again!", Toast.LENGTH_LONG).show();
