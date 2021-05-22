@@ -23,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        Button regBtn = (Button) findViewById(R.id.regBTN);
+        regBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
