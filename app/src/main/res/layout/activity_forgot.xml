@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/full_back"
-    tools:context=".LoginActivity">
+    tools:context=".ForgotActivity">
 
 
     <ImageButton
@@ -29,7 +29,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:layout_toRightOf="@id/backBtn"
-        android:text="Log in"
+        android:text="Forgot password"
         android:textColor="#FFFFFF"
         android:textSize="35dp"
         android:textStyle="bold" />
@@ -50,7 +50,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/passTV"
+        android:layout_above="@id/forgotBtn"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -67,84 +67,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/passTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/textFieldPwd"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:text="Password"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldPwd"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/loginBtn"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="Enter Your Password"
-        android:textColorHint="#666666">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textEditPwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:inputType="textPassword"
-            android:textColor="#ffffff" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/forgotBtn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_above="@id/linear"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/round_btn"
         android:text="Log in"
         android:textStyle="bold"
         app:backgroundTint="@null" />
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:gravity="right|end"
-            android:text="Don't have account? "
-            android:textColor="#FFFFFF" />
-
-        <TextView
-            android:id="@+id/signBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:background="#00000000"
-            android:gravity="start|left"
-            android:text="Sing up"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-    </LinearLayout>
 
 </RelativeLayout>

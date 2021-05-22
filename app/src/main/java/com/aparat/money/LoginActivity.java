@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +22,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     ImageButton backBtn;
-    Button loginBtn, signin;
+    Button loginBtn;
+    TextView signin;
     TextInputEditText emailEditText, passwordEditText;
     FirebaseAuth mAuth;
 
@@ -35,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         mAuth = FirebaseAuth.getInstance();
 
-        signin = (Button) findViewById(R.id.signBtn);
+        signin = (TextView) findViewById(R.id.signBtn);
         signin.setOnClickListener(this);
         loginBtn = (Button) findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(this);

@@ -13,6 +13,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button forgotBtn = (Button) findViewById(R.id.forgotPwd);
+        forgotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ForgotActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         Button loginBtn = (Button) findViewById(R.id.loginBTN);
         loginBtn.setOnClickListener(new View.OnClickListener() {
