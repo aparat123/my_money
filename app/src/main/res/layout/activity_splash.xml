@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#340168"
+    android:background="@drawable/splash_back"
     tools:context=".SplashActivity">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo" />
+        android:src="@drawable/white_logo" />
 
     <ProgressBar
         android:id="@+id/progressBar"
