@@ -87,7 +87,7 @@ public class SignupActivity extends AppCompatActivity{
                         @Override
                         public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                User user = new User(name, email, password);
+                                User user = new User(name, email, password,0);
 
 
                                 FirebaseDatabase.getInstance().getReference("Users")
